@@ -5,8 +5,8 @@ Linear Regression lab for ML Methods course on term 7
 
 TODO:
 
-- Find dataset, analyse it, check if valid and split into training and test data
-- SciKit learn approach
-- XGBoost approach
-- vanilla approach
-
+- [x] Find dataset, analyse it, check if valid and split into training and test data
+- [x] SciKit learn approach
+- [x] XGBoost approach
+- [ ] vanilla approach
+- [ ] create report
