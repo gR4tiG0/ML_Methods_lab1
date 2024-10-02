@@ -9,4 +9,4 @@ TODO:
 - [x] SciKit learn approach
 - [x] XGBoost approach
 - [x] vanilla approach
-- [ ] create report
+- [x] create report
