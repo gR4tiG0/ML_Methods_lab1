@@ -21,13 +21,22 @@ class LinearRegression:
         :param y: Target values, shape (n_samples,)
         """
         n_samples, n_features = X.shape
-        self.weights = np.random.rand(n_features)
+        # self.weights = np.random.rand(n_features)
+        self.weights = np.zeros(n_features)
         self.bias = 0 
         
-        for i in range(self.n_iters):
-            error = (np.dot(X, self.weights) + self.bias) - y
-            self.weights -= self.lr * np.dot(X.T, error) / n_samples
-            self.bias -= self.lr * np.sum(error) / n_samples
+        for _ in range(self.n_iters):
+            y_pred = np.dot(X, self.weights) + self.bias
+            error = y_pred - y
+            
+            # Compute gradients
+            dw = (1 / n_samples) * np.dot(X.T, error)
+            db = (1 / n_samples) * np.sum(error)
+            
+            # Update weights and bias
+            self.weights -= self.lr * dw
+            self.bias -= self.lr * db
+
     
     def predict(self, X: np.ndarray) -> np.ndarray:
         """
