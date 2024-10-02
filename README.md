@@ -8,5 +8,5 @@ TODO:
 - [x] Find dataset, analyse it, check if valid and split into training and test data
 - [x] SciKit learn approach
 - [x] XGBoost approach
-- [ ] vanilla approach
+- [x] vanilla approach
 - [ ] create report
